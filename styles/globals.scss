@@ -16,7 +16,7 @@ body {
     height: 100vh;
     //background: linear-gradient(to right bottom, #6d327c, #485DA6, #00a1ba, #01b18e, #32b37b);
     // background: #D3D3D3;
-    background-image: url("../public/bg.jpg");
+    // background-image: url("../public/bg.jpg");
     position: fixed;
     left: 0;
     top: 0;
@@ -60,4 +60,82 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+@layer base {
+  @font-face {
+    font-family: "Jost-SemiBold";
+    src: local("Jost-SemiBold"),
+      url(../assets/fonts/Jost/static/Jost-SemiBold.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Poppins-SemiBold";
+    src: local("Poppins-SemiBold"),
+      url(../assets/fonts/Poppins/Poppins-SemiBold.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Poppins-Regular";
+    src: local("Poppins-Regular"),
+      url(../assets/fonts/Poppins/Poppins-Regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Poppins-Italic";
+    src: local("Poppins-Italic"),
+      url(../assets/fonts/Poppins/Poppins-Italic.ttf) format("truetype");
+  }
+
+  h1 {
+    @apply font-jostSemiBold;
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply font-jostSemiBold;
+    @apply text-lg;
+  }
+
+  h3 {
+    @apply font-poppinsSemiBold;
+    @apply text-lg;
+  }
+
+  h4 {
+    @apply font-poppinsSemiBold;
+    @apply text-sm;
+    @apply uppercase;
+  }
+
+  h5 {
+    @apply font-poppins;
+    @apply text-base;
+    @apply uppercase;
+  }
+
+  h6 {
+    @apply font-poppins;
+    @apply text-sm;
+  }
+
+  p {
+    @apply font-poppins;
+    @apply text-base;
+  }
+
+  p.tag {
+    @apply font-poppins;
+    @apply text-xxs;
+    @apply uppercase;
+  }
+
+  li {
+    @apply text-base;
+  }
+
+  a {
+    @apply text-sm;
+    @apply font-poppinsSemiBold;
+    cursor: pointer;
+  }
 }

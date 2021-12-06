@@ -17,7 +17,7 @@ const PostWidget = ({ categories, slug }) => {
     }
   }, []);
 
-  console.log(relatedPosts);
+  if (relatedPosts.length === 0) return null;
 
   return (
     <div className="bg-white shadow-lg rounded-lg p-8 mb-8">
@@ -26,15 +26,6 @@ const PostWidget = ({ categories, slug }) => {
       </h3>
       {relatedPosts.map((post) => (
         <div key={post.title} className="flex items-center w-full mb-4">
-          <div className="w-16 flex-none">
-            <img
-              alt={post.title}
-              src={post.featuredImage.url}
-              height="60px"
-              width="60px"
-              className="align-middle rounded-full"
-            />
-          </div>
           <div className="flex-grow ml-4">
             <p className="text-gray-500 font-xs">
               {moment(post.createdAt).format("MMM DD, YYYY")}
