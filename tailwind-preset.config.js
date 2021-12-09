@@ -45,8 +45,9 @@ module.exports = {
           light: "#E8F0FE",
         },
         gray: {
-          darkest: "#262A35",
+          darkest: "hsla(0,0%,0%,0.8)",
           dark: "#51596D",
+          quote: "#ededed",
           DEFAULT: "#606060",
           medium: "#CCCCCC",
           light: "#F2F2F2",

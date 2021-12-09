@@ -5,7 +5,7 @@ const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 export const getPosts = async () => {
   const query = gql`
     query MyQuery {
-      postsConnection {
+      postsConnection(orderBy: createdAt_DESC) {
         edges {
           node {
             createdAt
@@ -13,8 +13,8 @@ export const getPosts = async () => {
             title
             excerpt
             author {
-              bio
               name
+              introduction
               id
               photo {
                 url
@@ -53,9 +53,6 @@ export const getPostDetails = async (slug) => {
         categories {
           name
           slug
-        }
-        content {
-          raw
         }
         markdown
       }
