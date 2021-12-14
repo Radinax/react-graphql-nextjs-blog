@@ -1,7 +1,6 @@
 import React from "react";
 import moment from "moment";
 import Link from "next/Link";
-import Image from "next/image";
 
 const PostCard = ({ post }) => {
   return (
