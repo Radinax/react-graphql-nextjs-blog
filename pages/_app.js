@@ -18,6 +18,10 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta property="og:title" content="Adrian Beria Blog" />
         <meta
+          property="og:image"
+          content="https://radinax.github.io/React-Personal-Blog-Gatsby/static/profile-pic-2c48d836a8e96aab21870fc707b385d4.jpg"
+        />
+        <meta
           name="description"
           content="Adrian Beria Blog was made with the purpose to document knowledge and to help others. This is an in depth blog to help beginners and experts"
         />
