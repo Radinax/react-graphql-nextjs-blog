@@ -1,10 +1,11 @@
 import React from "react";
 import moment from "moment";
 import Link from "next/link";
+import Tag from "./Tag";
 
 const PostCard = ({ post }) => {
   return (
-    <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
+    <div className="bg-white shadow-lg rounded-lg p-2 lg:p-8 mb-8">
       <h3 className="transition duration-700 text-center mb-8 cursor:pointer hover:text-pink-600 font-semibold">
         <Link href={`/post/${post.slug}`}>{post.title}</Link>
       </h3>
@@ -30,6 +31,11 @@ const PostCard = ({ post }) => {
       <p className="text-lg text-gray-700 font-normal px-4 lg:px-10 mb-8">
         {post.excerpt}
       </p>
+      <div className="flex flex-wrap px-4 lg:px-10">
+        {post.categories.map((category) => {
+          return <Tag key={category.name}>{category.name}</Tag>;
+        })}
+      </div>
     </div>
   );
 };
