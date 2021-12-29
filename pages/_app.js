@@ -23,7 +23,13 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           name="description"
-          content="Adrian Beria Blog was made with the purpose to document knowledge and to help others. This is an in depth blog to help beginners and experts"
+          content="A blog made by Adrian Beria to write articles related to Web Development and React JS"
+        />
+        <meta name="keywords" content="HTML, tags, attributes" />
+        <meta name="author" content="Adrian Beria" />
+        <link
+          rel="canonical"
+          href="https://react-graphql-nextjs-blog.vercel.app/"
         />
       </Head>
       <Component {...pageProps} />
