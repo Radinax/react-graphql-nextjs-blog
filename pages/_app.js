@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           name="keywords"
-          content="HTML, React, GraphQL, Blog, Programming, Fullstack, Testing, Tailwind, Redux, Adrian, Beria, Javascript"
+          content="HTML, React, GraphQL, Blog, Programming, Fullstack, Testing, Tailwind, Redux, Adrian, Beria, Javascript, Node, PostgreSQL, TypeScript, Sequelize"
         />
         <meta name="author" content="Adrian Beria" />
         <link
