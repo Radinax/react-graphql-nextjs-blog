@@ -25,7 +25,10 @@ function MyApp({ Component, pageProps }) {
           name="description"
           content="A blog made by Adrian Beria to write articles related to Web Development and React JS"
         />
-        <meta name="keywords" content="HTML, tags, attributes" />
+        <meta
+          name="keywords"
+          content="HTML, React, GraphQL, Blog, Programming, Fullstack, Testing, Tailwind, Redux, Adrian, Beria, Javascript"
+        />
         <meta name="author" content="Adrian Beria" />
         <link
           rel="canonical"
