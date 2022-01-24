@@ -8,6 +8,6 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")],
   presets: [require("./tailwind-preset.config.js")],
 };

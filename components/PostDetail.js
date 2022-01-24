@@ -5,6 +5,20 @@ import Image from "next/image";
 import remarkGfm from "remark-gfm";
 import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import toc from "remark-toc";
+
+const generateId = (() => {
+  let i = 0;
+  return (prefix = "") => {
+    i += 1;
+    return `${prefix}-${i}`;
+  };
+})();
+
+function HeadingRenderer(props) {
+  const slug = `h${props.level}-${generateId("title")}`;
+  return React.createElement(`h${props.level}`, { id: slug }, props.children);
+}
 
 const CodeBlock = {
   code({ node, inline, className, children, ...props }) {
@@ -25,6 +39,8 @@ const CodeBlock = {
       </code>
     );
   },
+  h2: HeadingRenderer,
+  h3: HeadingRenderer,
 };
 
 const PostDetail = ({ post }) => {
@@ -67,7 +83,7 @@ const PostDetail = ({ post }) => {
       <h1 className="my-4 lg:my-8 text-3xl font-semibold">{post.title}</h1>
       <ReactMarkdown
         className="whitespace-pre-wrap"
-        remarkPlugins={[remarkGfm]}
+        remarkPlugins={[remarkGfm, toc]}
         children={post.markdown}
         components={CodeBlock}
         escapeHtml={false}

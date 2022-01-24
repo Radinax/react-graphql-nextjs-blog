@@ -20,8 +20,8 @@ const PostWidget = ({ categories, slug }) => {
   if (relatedPosts.length === 0) return null;
 
   return (
-    <div className="bg-white shadow-lg rounded-lg p-8 mb-8">
-      <h3 className="text-xl mb-8 font-semibold border-b pb-4">
+    <div className="bg-white shadow-lg rounded-lg p-8 mb-4 h-1/4">
+      <h3 className="text-xl mb-4 font-semibold border-b pb-4">
         {slug ? "Related Posts" : "Recent Posts"}
       </h3>
       {relatedPosts.map((post) => (

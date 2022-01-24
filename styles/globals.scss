@@ -23,6 +23,7 @@ body {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-x: hidden;
   }
 }
 
@@ -50,6 +51,43 @@ body {
       width: 60px;
     }
   }
+}
+
+nav {
+  width: 100%;
+  min-width: 100%;
+  max-height: 700px;
+  padding: 16px;
+  margin: 8px;
+  align-self: flex-start;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 48px;
+  max-height: calc(100vh - 70px);
+  overflow: auto;
+  font-weight: bold;
+  li > ul {
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+    padding-bottom: 0;
+    li {
+      padding-bottom: 0;
+    }
+  }
+  li.active > a {
+    color: #197acf;
+  }
+  li {
+    &:before {
+      content: "";
+    }
+  }
+}
+
+h2,
+h3 {
+  scroll-margin-top: 16px;
 }
 
 * {
